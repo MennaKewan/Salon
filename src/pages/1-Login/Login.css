@@ -1,0 +1,37 @@
+
+.btn5{
+  display: flex;
+  width: 65px;
+  margin: 0  auto 130px;
+  
+}
+
+   .title1{
+    width: 100%;
+    text-align: center;
+ 
+   }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .form input,
+  .form button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form button {
+    background-color:  #F3C04F;
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+
+  
