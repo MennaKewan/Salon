@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.515); 
+  position: fixed; /* لجعل الـ Navbar مثبتًا أعلى الصفحة */
+  top: 0;
+  width: 100%; /* جعل العرض يغطي الصفحة بالكامل */
+  z-index: 1000; /* لضمان أن الـ Navbar فوق المحتوى */
+  padding: 10px 0; /* حشوة لتحديد الارتفاع */
+  text-align: right; /* محاذاة النص إلى اليمين */
+  direction: rtl; /* الاتجاه من اليمين لليسار */
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between; /* توزيع العناصر بين الشعار والقائمة */
+  align-items: center; /* محاذاة رأسية للعناصر */
+  max-width: 1200px; /* تحديد عرض الحاوية */
+  margin: 0 auto; /* مركزة الحاوية */
+  padding: 0 20px; /* حواف داخلية */
+  
+}
+
+.navbar .logo img {
+  height: 50px; /* تحديد ارتفاع الشعار */
+  width: auto; /* الحفاظ على نسب الصورة */
+}
+
+.navbar .links ul {
+  list-style: none; /* إزالة النقاط */
+  display: flex; /* ترتيب العناصر أفقيًا */
+  margin: 0; /* إزالة الهوامش الافتراضية */
+  padding: 0;
+}
+
+.navbar .links ul li {
+  margin-left: 20px; /* مسافة بين العناصر */
+}
+
+.navbar .links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar .links ul li a:hover {
+  color: #f8b400; /* تغيير اللون عند التمرير */
+}
+
+body {
+  margin: 0; /* إزالة الهوامش الافتراضية */
+  padding: 0;
+  direction: rtl; /* جعل اتجاه النصوص من اليمين إلى اليسار */
+}
