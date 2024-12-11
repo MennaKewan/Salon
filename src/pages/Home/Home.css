@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.home {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url('../../../public/assets/homebackground.jpg') no-repeat center center/cover;
+
+}
+
+.content {
+    width: 100vw; /* العرض يغطي النافذة بالكامل */
+    height: 100vh; /* الارتفاع يغطي النافذة بالكامل */
+    display: flex; /* لجعل العناصر بداخلها محاذية */
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    justify-content: center; /* محاذاة العناصر عموديًا */
+    align-items: center; /* محاذاة العناصر أفقيًا */
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+h1 {
+    font-family: 'Georgia', serif; /* خط كلاسيكي أنيق */
+    font-size: 3rem; /* حجم الخط كبير */
+    color: #333; /* لون غامق ولكن هادئ */
+    text-align: center; /* محاذاة النص في المنتصف */
+    letter-spacing: 2px; /* زيادة التباعد بين الحروف */
+    text-transform: capitalize; /* تحويل أول حرف من كل كلمة لحرف كبير */
+    padding: 10px; /* إضافة مسافة داخلية حول النص */
+    border-bottom: 2px solid #aaa; /* إضافة خط بسيط أسفل النص */
+    transition: all 0.3s ease-in-out; /* تأثير عند التفاعل */
+}
+
+/* تأثير عند التفاعل مع النص */
+h1:hover {
+    color: #837b56; /* تغيير اللون عند المرور فوق النص */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* إضافة ظل بسيط */
+    transform: translateY(-5px); /* رفع النص قليلاً عند المرور فوقه */
+}
+
