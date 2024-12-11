@@ -57,13 +57,11 @@ const Navbar = () => {
       {/* Sidebar (Dashboard) */}
       {isDashboardOpen && (
         <div className="sidebar">
-          <div className="close-btn" onClick={closeDashboard}>
-            <span className="x-icon">X</span> {/* أيقونة X */}
-          </div>
+
           <ul>
             <li><Link to="about">عن الخدمة</Link></li>
             <li><Link to="login">التسجيل</Link></li>
-            <li><Link to="login_in">تسجيل الدخول</Link></li>
+            <li><Link to="log-in">تسجيل الدخول</Link></li>
           </ul>
         </div>
       )}
