@@ -18,10 +18,6 @@ function App() {
        <Route path="/menu" element={<Menu />} />
        <Route path="/contact" element={<Contact />} />
        <Route path="/login" element={<Login />} />
-
-
-
-
       </Routes>
       <Footer />
     </div>
