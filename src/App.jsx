@@ -6,10 +6,10 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Menu from './pages/Menu/Menu';
 import Gallery from './pages/Gallery/Gallery';
-import Contact from './pages/Contact/Contact';
 import Login from './pages/1-Login/Login';
 import Navbar2 from './components/Navbar2/Navbar';
 import Service from './pages/Service/Service';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
@@ -20,9 +20,9 @@ function App() {
        <Route path="/about" element={<About />} />
        <Route path="/menu" element={<Menu />} />
        <Route path="/gallery" element={<Gallery />} />
-       <Route path="/contact" element={<Contact />} />
        <Route path="/login" element={<Login />} />
        <Route path="/Service" element={<Service/>} />
+       <Route path="/Contact" element={<Contact/>} />
       </Routes>
       <Footer />
     </div>

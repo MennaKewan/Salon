@@ -43,8 +43,8 @@ const Navbar2 = () => {
             {/* هذه الروابط ستكون فقط في الـ Sidebar */}
             <li><Link to="home">الصفحة الرئيسية</Link></li>
             <li><Link to="menu">قائمة الصالونات</Link></li>
-            <li><Link to="">عن الخدمة</Link></li>
-            <li><Link to="">تواصل معنا</Link></li>
+            <li><Link to="service">عن الخدمة</Link></li>
+            <li><Link to="contact">تواصل معنا</Link></li>
             <li><Link to="">طلباتى</Link></li>
             <li><Link to="">تسجيل الخروج</Link></li>
           </ul>
