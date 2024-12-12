@@ -9,7 +9,7 @@ const salons = [
 function Menu() {
   return (
 <div className="main-container">
-      <h2 className="title">قائمة الصالونات</h2>
+      <h1 className="title">قائمة الصالونات</h1>
       <div className="salons-container">
         {salons.map((salon, index) => (
           <div key={index} className="card-container">

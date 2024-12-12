@@ -1,10 +1,4 @@
 /* src/ContactForm.css */  
-body {  
-    font-family: Arial, sans-serif;  
-    background-color: #f8d7da;  
-    margin: 0;  
-    padding: 20px;  
-}  
 
 .contact-container {  
     color: #743a3a;  
@@ -28,16 +22,20 @@ input, textarea {
     box-sizing: border-box;  
 }  
 
-button {  
-    width: 100%;  
-    padding: 10px;  
-    background-color: #743a3a;  
-    color: #fff;  
-    border: none;  
-    border-radius: 4px;  
-    cursor: pointer;  
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #F3C04F;
+    color: #fff;
+    border: none;
+    border-radius: 30%;
+    cursor: pointer;
+    -webkit-border-radius: 30%;
+    -moz-border-radius: 30%;
+    -ms-border-radius: 30%;
+    -o-border-radius: 30%;
 }  
 
 button:hover {  
-    background-color: #6b3232;  
+    background-color: #c99e43;  
 }  

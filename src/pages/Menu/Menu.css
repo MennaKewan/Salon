@@ -61,11 +61,15 @@
     background-color: #F3C04F;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 100px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
   
   .card-button:hover {
     background-color: #c99e43;

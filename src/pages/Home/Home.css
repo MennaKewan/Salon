@@ -40,5 +40,99 @@ h1:hover {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* إضافة ظل بسيط */
     transform: translateY(-5px); /* رفع النص قليلاً عند المرور فوقه */
 }
+/* General Styles */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Light gray background */
+    text-align: center;
+    padding: 0 20px; /* Added padding for small screens */
+    box-sizing: border-box;
+  }
+  
+  .content {
+    max-width: 100%; /* Full width on smaller screens */
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Slightly smaller font on mobile */
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  .white1{
+    color: #fff;
+  }
+  p {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-style: italic;
+  }
+  
+  /* Button Styles */
+  .home-btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.home-btn{
 
+}
+  button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #F3C04F;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+  
+  button:hover {
+    background-color: #c89d41; /* Darker blue on hover */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem; /* Smaller title font on tablets and mobile */
+    }
+  
+    p {
+      font-size: 1.1rem; /* Smaller text for paragraph */
+    }
+  
+    .home-btn {
+      flex-direction: column; /* Stack the buttons vertically */
+      gap: 15px;
+    }
+  
+    button {
+      width: 100%; /* Full width buttons on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem; /* Smaller title on very small screens */
+    }
+  
+    p {
+      font-size: 1rem; /* Adjust the paragraph text */
+    }
+  }
+  
 
