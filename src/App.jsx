@@ -10,6 +10,7 @@ import Login from './pages/1-Login/Login';
 import Navbar2 from './components/Navbar2/Navbar';
 import Service from './pages/Service/Service';
 import Contact from './pages/Contact/Contact';
+import Order from './pages/Order/Order';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
        <Route path="/login" element={<Login />} />
        <Route path="/Service" element={<Service/>} />
        <Route path="/Contact" element={<Contact/>} />
+       <Route path="/Order" element={<Order/>} />
       </Routes>
       <Footer />
     </div>
