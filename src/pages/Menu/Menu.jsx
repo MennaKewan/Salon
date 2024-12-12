@@ -139,7 +139,6 @@ function Menu() {
           </button>
         </div>
       )}
-
       {showThankYou && (
         <div className="thank-you-card">
           <h2>شكرًا لتقييمك!</h2>
