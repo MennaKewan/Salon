@@ -20,6 +20,8 @@ body{
     justify-content: center; /* محاذاة العناصر عموديًا */
     align-items: center; /* محاذاة العناصر أفقيًا */
     background-color: rgba(0, 0, 0, 0.384);
+    
+ 
 }
 
 h1 {
@@ -50,6 +52,7 @@ h1:hover {
     text-align: center;
     padding: 0 20px; /* Added padding for small screens */
     box-sizing: border-box;
+
   }
   
   .content {
@@ -60,6 +63,7 @@ h1:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     box-sizing: border-box;
+    
   }
   
   h1 {

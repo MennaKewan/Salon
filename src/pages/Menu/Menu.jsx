@@ -8,6 +8,7 @@ const salons = [
 ];
 function Menu() {
   return (
+    <div className='menubg'>
 <div className="main-container">
       <h1 className="title">قائمة الصالونات</h1>
       <div className="salons-container">
@@ -21,6 +22,7 @@ function Menu() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
