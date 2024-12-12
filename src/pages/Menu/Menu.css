@@ -56,7 +56,38 @@
     color: #777;
     margin-bottom: 20px;
   }
-  
+  /* Menu.css */
+.salon-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.salon-card:hover {
+  transform: scale(1.05);
+}
+
+.salon-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.star {
+  font-size: 2rem;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star.filled {
+  color: gold;
+}
+
   .card-button {
     background-color: #F3C04F;
     color: #fff;
