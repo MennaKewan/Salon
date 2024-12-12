@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // استخدام NavLink بدلاً من Link
 import './Navbar2.css';
 
 const Navbar2 = () => {
@@ -34,19 +34,19 @@ const Navbar2 = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isMenuOpen ? 'open' : ''}`}>
       <div className="container">
         <div className="logo">
-          <Link to="/">
+          <NavLink to="/">
             <img src="/assets/main-logo.jpeg" alt="Logo" />
-          </Link>
+          </NavLink>
         </div>
         <div className={`links ${isMenuOpen ? 'open' : ''}`}>
           <ul>
-            {/* هذه الروابط ستكون فقط في الـ Sidebar */}
-            <li><Link to="home">الصفحة الرئيسية</Link></li>
-            <li><Link to="menu">قائمة الصالونات</Link></li>
-            <li><Link to="service">عن الخدمة</Link></li>
-            <li><Link to="order">طلباتى</Link></li>
-            <li><Link to="contact">تواصل معنا</Link></li>
-            <li><Link to="">تسجيل الخروج</Link></li>
+            {/* استخدم NavLink بدلاً من Link هنا */}
+            <li><NavLink to="home" activeClassName="active">الصفحة الرئيسية</NavLink></li>
+            <li><NavLink to="menu" activeClassName="active">قائمة الصالونات</NavLink></li>
+            <li><NavLink to="service" activeClassName="active">عن الخدمة</NavLink></li>
+            <li><NavLink to="order" activeClassName="active">طلباتى</NavLink></li>
+            <li><NavLink to="contact" activeClassName="active">تواصل معنا</NavLink></li>
+            <li><NavLink to="LogOut" activeClassName="active">تسجيل الخروج</NavLink></li>
           </ul>
         </div>
         <div className="menu-icon" onClick={toggleMenu}>
@@ -60,14 +60,13 @@ const Navbar2 = () => {
       {/* Sidebar (Dashboard) */}
       {isDashboardOpen && (
         <div className="sidebar">
-
           <ul>
-            <li><Link to="home">الصفحة الرئيسية</Link></li>
-            <li><Link to="menu">قائمة الصالونات</Link></li>
-            <li><Link to="service">عن الخدمة</Link></li>
-            <li><Link to="order">طلباتى</Link></li>
-            <li><Link to="contact">تواصل معنا</Link></li>
-            <li><Link to="">تسجيل الخروج</Link></li>
+            <li><NavLink to="home" activeClassName="active">الصفحة الرئيسية</NavLink></li>
+            <li><NavLink to="menu" activeClassName="active">قائمة الصالونات</NavLink></li>
+            <li><NavLink to="service" activeClassName="active">عن الخدمة</NavLink></li>
+            <li><NavLink to="order" activeClassName="active">طلباتى</NavLink></li>
+            <li><NavLink to="contact" activeClassName="active">تواصل معنا</NavLink></li>
+            <li><NavLink to="Logout" activeClassName="active">تسجيل الخروج</NavLink></li>
           </ul>
         </div>
       )}
