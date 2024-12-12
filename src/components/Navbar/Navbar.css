@@ -4,7 +4,16 @@
   padding: 5px 0; /* تقليل الارتفاع */
   position: relative;
 }
-
+.navbar {
+  position: fixed; /* لتثبيت الـ Navbar في أعلى الصفحة */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000; /* لتأكد من أن الـ Navbar سيكون فوق باقي المحتوى */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف تحت الـ Navbar */
+  transition: top 0.3s ease;
+}
 .container {
   display: flex;
   justify-content: space-between;

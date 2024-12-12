@@ -12,11 +12,12 @@ import Service from './pages/Service/Service';
 import Contact from './pages/Contact/Contact';
 import Order from './pages/Order/Order';
 import LogOut from './pages/LogOut/LogOut';
+import Navbar3 from './components/Navbar3/Navbar3';
 
 function App() {
   return (
     <div > 
-      <Navbar2 /> 
+      <Navbar2/> 
       <Routes>
        <Route path="/home" element={<Home />} />
        <Route path="/about" element={<About />} />
