@@ -22,7 +22,7 @@
   .title {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffffff;
   }
   
   /* Salons Container */
@@ -66,6 +66,7 @@
   }
   /* Menu.css */
 .salon-card {
+  background-color: rgba(254, 254, 254, 0.285);
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;

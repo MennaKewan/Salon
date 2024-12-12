@@ -13,6 +13,7 @@
   justify-content: center; /* Centers content vertically */
   width: 100%;
   background-color: rgba(0, 0, 0, 0.384);
+  color: white;
 }
 
 /* Title Styling */

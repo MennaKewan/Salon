@@ -1,68 +1,67 @@
-/* Background Style */
 .contact-bg {
   background: url('../../../public/assets/homebackground.jpg') no-repeat center center/cover;
-}
-
-/* Contact Container */
-.contact-container {
-  padding: 60px;
-  text-align: center;
-  min-height: 90vh; /* Ensures the container takes the full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centers content vertically */
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.384);
-  color: #ffffff; /* تغيير لون النص إلى الأبيض */
-}
-
-/* Title Styling */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #000000; /* تغيير لون النص إلى الأسود */
-  position: relative;
-}
-
-/* Form Styling */
-form {
-  max-width: 400px; /* تكبير عرض الفقرة قليلاً */
-  margin: 0 auto; /* توسيط الفقرة */
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+
+.contact-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.384);
+  padding-bottom: 200px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 30%;
+  margin: 0 auto;
 }
 
 label {
-  margin: 10px 0 5px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: larger;
 }
 
 input, textarea {
-  padding: 8px;
-  font-size: 1rem;
+  width: 100%;
+  padding: 13px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%; /* ضمان أن العرض يمتد بعرض الفقرة */
-  box-sizing: border-box;
-  text-align: right; /* جعل النص داخل الحقول يبدأ من اليمين */
+  border-radius: 4px;
 }
 
 button {
-  background-color: #ac976a;
-  color: #fff;
+  padding: 10px;
+  background-color: #9a955a;
+  color: white;
   border: none;
-  border-radius: 100px;
-  padding: 10px 20px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-  width: fit-content; /* لجعل الزرار يعرض النص بداخله فقط */
-  align-self: center; /* لتوسيط الزر في النموذج */
+  font-size: 16px;
+  width: 50%;
+  font-size: 1rem;
+  border-radius: 5px;
+  align-self: center;
 }
 
 button:hover {
-  background-color: #c99e43; /* تغيير لون الزر عند التمرير ليصبح جولد */
+  background-color: #908f71;
 }
