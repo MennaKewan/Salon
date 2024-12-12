@@ -131,7 +131,7 @@ const Login = () => {
                       <label>أوقات العمل:</label>
                       <input
                         type="text"
-                        name="salonContact"
+                        name="workingHours"
                         value={formData.salonContact}
                         onChange={handleChange}
                         required
@@ -142,7 +142,7 @@ const Login = () => {
                       <label>الخدمات المقدمة:</label>
                       <textarea
                         type="text"
-                        name="salonContact"
+                        name="services"
                         value={formData.salonContact}
                         onChange={handleChange}
                         required
@@ -153,7 +153,7 @@ const Login = () => {
                       <label>اسم المالك:</label>
                       <input
                         type="text"
-                        name="salonContact"
+                        name="ownerName"
                         value={formData.salonContact}
                         onChange={handleChange}
                         required
@@ -164,7 +164,7 @@ const Login = () => {
                       <label>رقم المالك للتواصل:</label>
                       <input
                         type="text"
-                        name="salonContact"
+                        name="ownerContact"
                         value={formData.salonContact}
                         onChange={handleChange}
                         required
@@ -203,6 +203,16 @@ const Login = () => {
                       <input
                         type="date"
                         name="birthDate"
+                        value={formValues.birthDate}
+                        onChange={handleInputChange}
+                        style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>العنوان:</label>
+                      <input
+                        type="text"
+                        name="address"
                         value={formValues.birthDate}
                         onChange={handleInputChange}
                         style={{ width: "100%", padding: "8px", marginTop: "5px" }}
