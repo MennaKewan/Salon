@@ -42,8 +42,8 @@ const Navbar = () => {
           <ul>
             {/* هذه الروابط ستكون فقط في الـ Sidebar */}
             <li><Link to="about">عن الخدمة</Link></li>
-            <li><Link to="login">التسجيل</Link></li>
-            <li><Link to="login_in">تسجيل الدخول</Link></li>
+            <li><Link to="login ">التسجيل</Link></li> {/* رابط التسجيل */}
+            <li><Link to="signup">تسجيل الدخول</Link></li>
           </ul>
         </div>
         <div className="menu-icon" onClick={toggleMenu}>
@@ -57,11 +57,10 @@ const Navbar = () => {
       {/* Sidebar (Dashboard) */}
       {isDashboardOpen && (
         <div className="sidebar">
-
           <ul>
             <li><Link to="about">عن الخدمة</Link></li>
-            <li><Link to="login">التسجيل</Link></li>
-            <li><Link to="log-in">تسجيل الدخول</Link></li>
+            <li><Link to="signup">التسجيل</Link></li>
+            <li><Link to="login">تسجيل الدخول</Link></li>
           </ul>
         </div>
       )}

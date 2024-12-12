@@ -69,6 +69,8 @@ const Login = () => {
   };
 
   return (
+    <div className="signup">
+      <div className="signup-content">
     <div className="my-5 background" dir="rtl">
       <h1 className="title1">التسجيل</h1>
       <form className="form">
@@ -191,6 +193,8 @@ const Login = () => {
           تسجيل
         </button>
       </form>
+    </div>
+    </div>
     </div>
   );
 };

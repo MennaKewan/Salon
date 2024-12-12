@@ -1,36 +1,61 @@
-
-.btn5{
+.signup {
+  background: url('../../../public/assets/homebackground.jpg') no-repeat center center/cover;
+  justify-content: flex-start; 
   display: flex;
-  width: 65px;
-  margin: 0  auto 130px;
-  
+  align-items: center;
+  height: 100vh;
 }
 
-   .title1{
-    width: 100%;
-    text-align: center;
- 
-   }
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  .form input,
-  .form button {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form button {
-    background-color:  #F3C04F;
-    color: white;
-    cursor: pointer;
-    border: none;
-  }
+.signup-content {
+  padding-top: 20px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.384);
+}
 
+.btn5 {
+  display: flex;
+  width: 60%; /* زيادة عرض الزر */
+  margin: 0 auto 130px;
+  max-width: 250px; /* تحديد عرض أقصى للزر */
+}
+
+.title1 {
+  width: 100%;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 75%; /* زيادة عرض النموذج */
+  max-width: 450px; /* تحديد عرض أقصى للنموذج */
+  margin: 0 auto;
+}
+
+.form input,
+.form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100vw;
+  max-width: 350px; /* زيادة عرض العناصر */
+  box-sizing: border-box;
+}
+
+.form button {
+  background-color:  #F3C04F;
+  color: white;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #d1a642;
+}
