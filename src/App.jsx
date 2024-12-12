@@ -10,12 +10,13 @@ import Login from './pages/1-Login/Login';
 import SignUp from './pages/signup/signup';
 
 
+
 function App() {
   return (
     <div > 
       <Navbar /> 
       <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route path="/home" element={<Home/>} />
        <Route path="/about" element={<About />} />
        <Route path="/menu" element={<Menu />} />
        <Route path="/contact" element={<Contact />} />

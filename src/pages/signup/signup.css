@@ -1,6 +1,6 @@
 .login {
     background: url('../../../public/assets/homebackground.jpg') no-repeat center center/cover;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
