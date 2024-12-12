@@ -9,6 +9,7 @@ import Gallery from './pages/Gallery/Gallery';
 import Contact from './pages/Contact/Contact';
 import Login from './pages/1-Login/Login';
 
+
 function App() {
   return (
     <div > 
