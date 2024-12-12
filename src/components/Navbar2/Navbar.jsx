@@ -41,8 +41,8 @@ const Navbar2 = () => {
         <div className={`links ${isMenuOpen ? 'open' : ''}`}>
           <ul>
             {/* هذه الروابط ستكون فقط في الـ Sidebar */}
-            <li><Link to="">الصفحة الرئيسية</Link></li>
-            <li><Link to="">قائمة الصالونات</Link></li>
+            <li><Link to="home">الصفحة الرئيسية</Link></li>
+            <li><Link to="menu">قائمة الصالونات</Link></li>
             <li><Link to="">عن الخدمة</Link></li>
             <li><Link to="">تواصل معنا</Link></li>
             <li><Link to="">طلباتى</Link></li>
@@ -62,9 +62,9 @@ const Navbar2 = () => {
         <div className="sidebar">
 
           <ul>
-            <li><Link to="">الصفحة الرئيسية</Link></li>
-            <li><Link to="">قائمة الصالونات</Link></li>
-            <li><Link to="">عن الخدمة</Link></li>
+            <li><Link to="home">الصفحة الرئيسية</Link></li>
+            <li><Link to="menu">قائمة الصالونات</Link></li>
+            <li><Link to="service">عن الخدمة</Link></li>
             <li><Link to="">تواصل معنا</Link></li>
             <li><Link to="">طلباتى</Link></li>
             <li><Link to="">تسجيل الخروج</Link></li>
