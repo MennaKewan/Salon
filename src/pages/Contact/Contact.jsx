@@ -8,7 +8,6 @@ const Contact = () => {
     message: '',
   });
 
-  // دالة التعامل مع التغيير في الحقول
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,50 +16,50 @@ const Contact = () => {
     });
   };
 
-  // دالة التعامل مع إرسال النموذج
   const handleSubmit = (e) => {
     e.preventDefault();
-    // يمكنك هنا إضافة معالجة البيانات مثل إرسالها إلى خادم
     console.log('Data submitted:', formData);
     alert('تم إرسال الرسالة بنجاح');
-    setFormData({ name: '', phone: '', message: '' }); // إعادة تعيين الحقول بعد الإرسال
+    setFormData({ name: '', phone: '', message: '' });
   };
 
   return (
-    <div className="contact-container">
-      <h2>تواصل معنا</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">الاسم</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+    <div className="contact-bg"> {/* تطبيق الفئة هنا */}
+      <div className="contact-container">
+        <h1>تواصل معنا</h1>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name">الاسم</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="phone">رقم الهاتف</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="phone">رقم الهاتف</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="message">الرسالة</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
+          <label htmlFor="message">الرسالة</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
 
-        <button type="submit">إرسال</button>
-      </form>
+          <button type="submit">إرسال</button>
+        </form>
+      </div>
     </div>
   );
 };

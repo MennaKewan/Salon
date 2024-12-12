@@ -1,41 +1,68 @@
-/* src/ContactForm.css */  
+/* Background Style */
+.contact-bg {
+  background: url('../../../public/assets/homebackground.jpg') no-repeat center center/cover;
+}
 
-.contact-container {  
-    color: #743a3a;  
-}  
+/* Contact Container */
+.contact-container {
+  padding: 60px;
+  text-align: center;
+  min-height: 90vh; /* Ensures the container takes the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.384);
+  color: #ffffff; /* تغيير لون النص إلى الأبيض */
+}
 
-h2 {  
-    text-align: center;  
-}  
+/* Title Styling */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000000; /* تغيير لون النص إلى الأسود */
+  position: relative;
+}
 
-label {  
-    display: block;  
-    margin: 10px 0 5px;  
-}  
+/* Form Styling */
+form {
+  max-width: 400px; /* تكبير عرض الفقرة قليلاً */
+  margin: 0 auto; /* توسيط الفقرة */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-input, textarea {  
-    width: 100%;  
-    padding: 10px;  
-    margin-bottom: 15px;  
-    border: 1px solid #ccc;  
-    border-radius: 4px;  
-    box-sizing: border-box;  
-}  
+label {
+  margin: 10px 0 5px;
+}
+
+input, textarea {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* ضمان أن العرض يمتد بعرض الفقرة */
+  box-sizing: border-box;
+  text-align: right; /* جعل النص داخل الحقول يبدأ من اليمين */
+}
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #F3C04F;
-    color: #fff;
-    border: none;
-    border-radius: 30%;
-    cursor: pointer;
-    -webkit-border-radius: 30%;
-    -moz-border-radius: 30%;
-    -ms-border-radius: 30%;
-    -o-border-radius: 30%;
-}  
+  background-color: #ac976a;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  width: fit-content; /* لجعل الزرار يعرض النص بداخله فقط */
+  align-self: center; /* لتوسيط الزر في النموذج */
+}
 
-button:hover {  
-    background-color: #c99e43;  
-}  
+button:hover {
+  background-color: #c99e43; /* تغيير لون الزر عند التمرير ليصبح جولد */
+}

@@ -12,7 +12,11 @@ import Service from './pages/Service/Service';
 import Contact from './pages/Contact/Contact';
 import Order from './pages/Order/Order';
 import LogOut from './pages/LogOut/LogOut';
+
+import SignUp from './pages/signup/signup';
+
 import Navbar3 from './components/Navbar3/Navbar3';
+
 
 function App() {
   return (
@@ -28,6 +32,7 @@ function App() {
        <Route path="/Contact" element={<Contact/>} />
        <Route path="/Order" element={<Order/>} />
        <Route path="/LogOut" element={<LogOut/>} />
+       <Route path="/signup" element={<SignUp/>} />
       </Routes>
       <Footer />
     </div>
