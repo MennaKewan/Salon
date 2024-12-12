@@ -12,11 +12,11 @@ import Service from './pages/Service/Service';
 import Contact from './pages/Contact/Contact';
 import Order from './pages/Order/Order';
 import LogOut from './pages/LogOut/LogOut';
-<<<<<<< HEAD
+
 import SignUp from './pages/signup/signup';
-=======
+
 import Navbar3 from './components/Navbar3/Navbar3';
->>>>>>> b5a72eb146a249c5878154d2e887efc6112d4e1a
+
 
 function App() {
   return (
