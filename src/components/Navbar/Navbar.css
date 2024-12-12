@@ -2,7 +2,8 @@
 .navbar {
   background-color: #333;
   padding: 5px 0; /* تقليل الارتفاع */
-  position: relative;
+  position: fixed;
+  z-index: 22;
 }
 
 .container {
@@ -122,4 +123,9 @@
   .navbar.open .sidebar {
     display: flex; /* عرض الـ Sidebar عند فتح القائمة */
   }
+}
+/* إضافات CSS لتمييز الرابط النشط */
+.navbar .links ul li .active {
+color: #F3C04F !important; /* اللون الأصفر */
+font-weight: bold; /* جعل النص سميكًا */
 }
