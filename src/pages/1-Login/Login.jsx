@@ -130,10 +130,43 @@ const Login = () => {
                       />
                     </div>
                     <div style={{ marginBottom: "15px" }}>
-                      <label>رقم الصالون للتواصل:</label>
+                      <label>أوقات العمل:</label>
                       <input
                         type="text"
-                        name="salonContact"
+                        name="workingHours"
+                        value={formData.salonContact}
+                        onChange={handleChange}
+                        required
+                        style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>الخدمات المقدمة:</label>
+                      <textarea
+                        type="text"
+                        name="services"
+                        value={formData.salonContact}
+                        onChange={handleChange}
+                        required
+                        style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>اسم المالك:</label>
+                      <input
+                        type="text"
+                        name="ownerName"
+                        value={formData.salonContact}
+                        onChange={handleChange}
+                        required
+                        style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>رقم المالك للتواصل:</label>
+                      <input
+                        type="text"
+                        name="ownerContact"
                         value={formData.salonContact}
                         onChange={handleChange}
                         required
@@ -172,6 +205,16 @@ const Login = () => {
                       <input
                         type="date"
                         name="birthDate"
+                        value={formValues.birthDate}
+                        onChange={handleInputChange}
+                        style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+                      />
+                    </div>
+                    <div style={{ marginBottom: "15px" }}>
+                      <label>العنوان:</label>
+                      <input
+                        type="text"
+                        name="address"
                         value={formValues.birthDate}
                         onChange={handleInputChange}
                         style={{ width: "100%", padding: "8px", marginTop: "5px" }}
