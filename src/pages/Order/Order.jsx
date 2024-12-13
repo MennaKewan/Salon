@@ -3,25 +3,8 @@ import './Order.css';
 
 const Order = () => {
   const [orders, setOrders] = useState([
-    { id: 1, serviceName: 'خدمة 1', orderNumber: '5', serviceDate: '2024-12-18', status: 'بانتظار قبول الطلب' },
+    { id: 1, serviceName: 'خدمة 1', orderNumber: '5', serviceDate: '2024-12-18', status: 'بانتظار قبول الطلب', customerName: 'عميل 1', customerEmail: 'customer1@example.com' },
   ]);
-
-  const [newOrder, setNewOrder] = useState({
-    serviceName: '',
-    orderNumber: '',
-    serviceDate: '',
-    status: 'بانتظار قبول الطلب',
-  });
-
-  const addOrder = () => {
-    if (newOrder.serviceName && newOrder.orderNumber && newOrder.serviceDate) {
-      const orderId = orders.length ? orders[orders.length - 1].id + 1 : 1;
-      setOrders([...orders, { ...newOrder, id: orderId }]);
-      setNewOrder({ serviceName: '', orderNumber: '', serviceDate: '', status: 'بانتظار قبول الطلب' });
-    } else {
-      alert('يرجى ملء جميع الحقول');
-    }
-  };
 
   const deleteOrder = (id) => {
     setOrders(orders.filter(order => order.id !== id));
@@ -30,34 +13,13 @@ const Order = () => {
   const editOrder = (id) => {
     const orderToEdit = orders.find(order => order.id === id);
     setNewOrder({ ...orderToEdit });
-    deleteOrder(id); // إزالة الطلب القديم قبل إضافة التعديلات
+    deleteOrder(id);
   };
 
   return (
     <div className="orders-bg"> {/* تطبيق الفئة هنا */}
       <div className="orders-container">
-        <h1>طلبياتي</h1>
-
-        <div className="add-order">
-          <input
-            type="text"
-            placeholder="اسم الخدمة"
-            value={newOrder.serviceName}
-            onChange={(e) => setNewOrder({ ...newOrder, serviceName: e.target.value })}
-          />
-          <input
-            type="text"
-            placeholder="رقم الطلب"
-            value={newOrder.orderNumber}
-            onChange={(e) => setNewOrder({ ...newOrder, orderNumber: e.target.value })}
-          />
-          <input
-            type="date"
-            value={newOrder.serviceDate}
-            onChange={(e) => setNewOrder({ ...newOrder, serviceDate: e.target.value })}
-          />
-          <button onClick={addOrder}>إضافة طلب</button>
-        </div>
+        <h1 style={{color:"white"}}>طلباتي</h1>
 
         <table className="orders-table">
           <thead>
@@ -65,6 +27,8 @@ const Order = () => {
               <th>رقم الطلب</th>
               <th>اسم الخدمة</th>
               <th>تاريخ الخدمة</th>
+              <th>اسم العميل</th>
+              <th>البريد الإلكتروني للعميل</th>
               <th>الحالة</th>
               <th>التعديلات</th>
             </tr>
@@ -75,6 +39,8 @@ const Order = () => {
                 <td>{order.orderNumber}</td>
                 <td>{order.serviceName}</td>
                 <td>{order.serviceDate}</td>
+                <td>{order.customerName}</td>
+                <td>{order.customerEmail}</td>
                 <td>{order.status}</td>
                 <td>
                   <button onClick={() => editOrder(order.id)}>تعديل</button>
