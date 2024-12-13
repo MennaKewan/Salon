@@ -39,9 +39,24 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .logout-message {
     width: 90%;
+    padding: 25px;
+  }
+
+  .logout-message h2 {
+    font-size: 1.75rem;
+  }
+
+  .logout-message p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logout-message {
+    width: 95%;
     padding: 20px;
   }
 
@@ -51,5 +66,28 @@
 
   .logout-message p {
     font-size: 0.9rem;
+  }
+
+  .logout-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logout-message {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .logout-message h2 {
+    font-size: 1.25rem;
+  }
+
+  .logout-message p {
+    font-size: 0.85rem;
+  }
+
+  .logout-container {
+    padding: 15px;
   }
 }

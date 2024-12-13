@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './Menu.css';
 
 const salons = [
-  { name: 'صالون لمسات', image: 'images/salon1.jpg' },
-  { name: 'صالون قصر الملكة', image: 'images/salon2.jpg' },
-  { name: 'صالون آش', image: 'images/salon3.jpg' },
-  { name: 'صالون نجوتي', image: 'images/salon4.jpg' },
-  { name: 'صالون ميس الجمال', image: 'images/salon5.jpg' },
-  { name: 'صالون نولوي', image: 'images/salon6.jpg' },
+  { name: 'صالون لمسات', image: '/assets/salon1.jpg' },
+  { name: 'صالون قصر الملكة', image: '/assets/salon4.jpg' },
+  { name: 'صالون آش', image: '/assets/salon3.jpg' },
+  { name: 'صالون نجوتي', image: '/assets/salon4.jpg' },
+  { name: 'صالون ميس الجمال', image: '/assets/salon5.jpg' },
+  { name: 'صالون نولوي', image: '/assets/salon6.jpg' },
 ];
 
 const servicesData = {
@@ -69,98 +69,86 @@ function Menu() {
   };
 
   return (
-<<<<<<< HEAD
     <div className='menubg'>
-<div className="main-container">
-      <h1 className="title">قائمة الصالونات</h1>
-      <div className="salons-container">
-        {salons.map((salon, index) => (
-          <div key={index} className="card-container">
-            <div className="card">
-              <h5 className="card-title">{salon.name}</h5>
-              <p className="card-text">عدد الخدمات: {salon.services}</p>
-              <button className="card-button">عرض الخدمات</button>
-=======
-    <div className="main-container">
-      <h1 className="title">اختيار الصالون والخدمة</h1>
-
-      {!selectedSalon && !showThankYou && (
-        <div className="salons-container">
-          {salons.map((salon, index) => (
-            <div key={index} className="salon-card" onClick={() => handleSalonSelect(salon)}>
-              <img src={salon.image} alt={salon.name} className="salon-image" />
-              <h3>{salon.name}</h3>
->>>>>>> b5a72eb146a249c5878154d2e887efc6112d4e1a
-            </div>
-          ))}
-        </div>
-      )}
-
-      {selectedSalon && !selectedCategory && !showThankYou && (
-        <div className="categories-container">
-          <h2>الخدمات المتوفرة في {selectedSalon.name}</h2>
-          {Object.keys(servicesData).map((category, index) => (
-            <button
-              key={index}
-              className="category-button"
-              onClick={() => handleCategorySelect(category)}
-            >
-              {category}
-            </button>
-          ))}
-          <button className="back-button" onClick={() => setSelectedSalon(null)}>
-            رجوع لاختيار الصالون
-          </button>
-        </div>
-      )}
-
-      {selectedCategory && !selectedService && !showThankYou && (
-        <div className="services-container">
-          <h2>اختر الخدمة من {selectedCategory}</h2>
-          {servicesData[selectedCategory].map((service, index) => (
-            <button
-              key={index}
-              className="service-button"
-              onClick={() => handleServiceSelect(service)}
-            >
-              {service.name} - {service.price}
-            </button>
-          ))}
-          <button className="back-button" onClick={() => setSelectedCategory(null)}>
-            رجوع لاختيار الفئة
-          </button>
-        </div>
-      )}
-
-      {selectedService && !showThankYou && (
-        <div className="rating-card">
-          <h2>تقييم الخدمة</h2>
-          <p>{selectedService.name} - {selectedService.price}</p>
-          <div className="stars">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <span
-                key={star}
-                className={star <= rating ? 'star filled' : 'star'}
-                onClick={() => handleRating(star)}
-              >
-                ★
-              </span>
+      <div className="main-container">
+        <h1 className="title">قائمة الصالونات</h1>
+        {!selectedSalon && !showThankYou && (
+          <div className="salons-container">
+            {salons.map((salon, index) => (
+              <div key={index} className="salon-card" onClick={() => handleSalonSelect(salon)}>
+                <img src={salon.image} alt={salon.name} className="salon-image" />
+                <h3>{salon.name}</h3>
+              </div>
             ))}
           </div>
-          <button className="close-button" onClick={handleCloseRating}>
-            إغلاق
-          </button>
-        </div>
-      )}
-      {showThankYou && (
-        <div className="thank-you-card">
-          <h2>شكرًا لتقييمك!</h2>
-          <button className="close-button" onClick={handleThankYouClose}>
-            إغلاق
-          </button>
-        </div>
-      )}
-    </div>
+        )}
+
+        {selectedSalon && !selectedCategory && !showThankYou && (
+          <div className="categories-container">
+            <h2>الخدمات المتوفرة في {selectedSalon.name}</h2>
+            {Object.keys(servicesData).map((category, index) => (
+              <button
+                key={index}
+                className="category-button"
+                onClick={() => handleCategorySelect(category)}
+              >
+                {category}
+              </button>
+            ))}
+            <button className="back-button" onClick={() => setSelectedSalon(null)}>
+              رجوع لاختيار الصالون
+            </button>
+          </div>
+        )}
+
+        {selectedCategory && !selectedService && !showThankYou && (
+          <div className="services-container">
+            <h2>اختر الخدمة من {selectedCategory}</h2>
+            {servicesData[selectedCategory].map((service, index) => (
+              <button
+                key={index}
+                className="service-button"
+                onClick={() => handleServiceSelect(service)}
+              >
+                {service.name} - {service.price}
+              </button>
+            ))}
+            <button className="back-button" onClick={() => setSelectedCategory(null)}>
+              رجوع لاختيار الفئة
+            </button>
+          </div>
+        )}
+
+        {selectedService && !showThankYou && (
+          <div className="rating-card">
+            <h2>تقييم الخدمة</h2>
+            <p>{selectedService.name} - {selectedService.price}</p>
+            <div className="stars">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <span
+                  key={star}
+                  className={star <= rating ? 'star filled' : 'star'}
+                  onClick={() => handleRating(star)}
+                >
+                  ★
+                </span>
+              ))}
+            </div>
+            <button className="close-button" onClick={handleCloseRating}>
+              إغلاق
+            </button>
+          </div>
+        )}
+
+        {showThankYou && (
+          <div className="thank-you-card">
+            <h2>شكرًا لتقييمك!</h2>
+            <button className="close-button" onClick={handleThankYouClose}>
+              إغلاق
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

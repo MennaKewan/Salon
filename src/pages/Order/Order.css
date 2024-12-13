@@ -13,13 +13,14 @@
   justify-content: center; /* Centers content vertically */
   width: 100%;
   background-color: rgba(0, 0, 0, 0.384);
+  color: white;
 }
 
 /* Title Styling */
 h1 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ffffff; /* تغيير لون النص إلى الأبيض */
+  color: #ffffff; 
 }
 
 /* Add Order Form */
@@ -35,6 +36,7 @@ h1 {
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  
 }
 
 .add-order button {

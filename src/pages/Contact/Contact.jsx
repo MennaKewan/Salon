@@ -24,38 +24,47 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-bg"> {/* تطبيق الفئة هنا */}
+    <div className="contact-bg">
       <div className="contact-container">
         <h1>تواصل معنا</h1>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="name">الاسم</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-group">
+            <label htmlFor="name">الاسم</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="أدخل اسمك"
+              required
+            />
+          </div>
 
-          <label htmlFor="phone">رقم الهاتف</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+          <div className="form-group">
+            <label htmlFor="phone">رقم الهاتف</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="أدخل رقم الهاتف"
+              required
+            />
+          </div>
 
-          <label htmlFor="message">الرسالة</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
+          <div className="form-group">
+            <label htmlFor="message">الرسالة</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="أدخل رسالتك"
+              required
+            ></textarea>
+          </div>
 
           <button type="submit">إرسال</button>
         </form>
