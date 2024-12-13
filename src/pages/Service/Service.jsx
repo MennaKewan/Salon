@@ -172,7 +172,6 @@ const Service = () => {
     setShowOrderForm(false);
     setSelectedService('');
     setSelectedOption('');
-<<<<<<< HEAD
     setPaymentMethod('');
     setFormData({
       name: '',
@@ -232,8 +231,6 @@ const Service = () => {
       console.error('Error:', error);
       alert('تعذر إرسال الطلب. الرجاء المحاولة لاحقاً.');
     }
-=======
->>>>>>> 759c7dc99eed0cefc2b36ed93122ec56df9ba607
   };
 
   return (
@@ -315,7 +312,6 @@ const Service = () => {
                   <option value="cash">نقداً عند التسليم</option>
                 </select>
               </label>
-<<<<<<< HEAD
               {paymentMethod === 'credit' && (
                 <>
                   <label>
@@ -332,8 +328,6 @@ const Service = () => {
                   </label>
                 </>
               )}
-=======
->>>>>>> 759c7dc99eed0cefc2b36ed93122ec56df9ba607
               <div className="button-group">
                 <button type="submit" className='btn7' >إرسال الطلب</button>
                 <button type="button"  onClick={handleFormClose}>إغلاق</button>

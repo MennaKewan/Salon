@@ -41,7 +41,7 @@ const Navbar2 = () => {
         <div className={`links ${isMenuOpen ? 'open' : ''}`}>
           <ul>
             {/* استخدم NavLink بدلاً من Link هنا */}
-            <li><NavLink to="home" activeClassName="active">الصفحة الرئيسية</NavLink></li>
+            <li><NavLink to="" activeClassName="active">الصفحة الرئيسية</NavLink></li>
             <li><NavLink to="menu" activeClassName="active">قائمة الصالونات</NavLink></li>
             <li><NavLink to="service" activeClassName="active"> خدمات صالوناتي </NavLink></li>
             <li><NavLink to="order" activeClassName="active">طلباتى</NavLink></li>
