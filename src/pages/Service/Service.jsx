@@ -24,7 +24,7 @@ const Service = () => {
   return (
     <div className="servicebg">
       <div className="service-bg">
-        <h1>خدمات صالوناتي</h1>
+        <h1 style={{color:"white"}}>خدمات صالوناتي</h1>
         <main className="service-main">
           <div className="service-card">
             <img src="/assets/hair1.jfif" alt="قص الشعر" className="service-image" />
