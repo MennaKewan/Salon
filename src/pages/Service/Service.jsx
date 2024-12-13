@@ -5,6 +5,7 @@ const Service = () => {
   const [showOrderForm, setShowOrderForm] = useState(false);
   const [selectedService, setSelectedService] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
+  const [paymentMethod, setPaymentMethod] = useState('');
 
   const handleOrderClick = (service) => {
     if (selectedOption) {
@@ -19,12 +20,13 @@ const Service = () => {
     setShowOrderForm(false);
     setSelectedService('');
     setSelectedOption('');
+    setPaymentMethod('');
   };
 
   return (
     <div className="servicebg">
       <div className="service-bg">
-        <h1 style={{color:"white"}}>خدمات صالوناتي</h1>
+        <h1 style={{ color: 'white' }}>خدمات صالوناتي</h1>
         <main className="service-main">
           <div className="service-card">
             <img src="/assets/hair1.jfif" alt="قص الشعر" className="service-image" />
@@ -86,12 +88,31 @@ const Service = () => {
               </label>
               <label>
                 طريقة الدفع:
-                <select name="payment" required>
+                <select name="payment" required onChange={(e) => setPaymentMethod(e.target.value)}>
                   <option value="">اختر طريقة الدفع</option>
                   <option value="credit">بطاقة ائتمان</option>
                   <option value="cash">نقداً عند التسليم</option>
                 </select>
               </label>
+
+              {/* Show additional fields if payment method is credit card */}
+              {paymentMethod === 'credit' && (
+                <>
+                  <label>
+                    رقم البطاقة:
+                    <input type="text" name="cardNumber" required />
+                  </label>
+                  <label>
+                    تاريخ الانتهاء:
+                    <input type="text" name="expiryDate" placeholder="MM/YY" required />
+                  </label>
+                  <label>
+                    CVV:
+                    <input type="text" name="cvv" required />
+                  </label>
+                </>
+              )}
+
               <div className="button-group">
                 <button type="submit">إرسال الطلب</button>
                 <button type="button" onClick={handleFormClose}>إغلاق</button>
