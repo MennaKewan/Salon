@@ -1,3 +1,4 @@
+/* Background Style */
 .contact-bg {
   background: url('../../../public/assets/homebackground.jpg') no-repeat center center/cover;
   width: 100%;
@@ -19,7 +20,6 @@
   background-color: rgba(0, 0, 0, 0.384);
   padding-bottom: 200px;
 }
-
 
 h1 {
   width: 100%;
@@ -65,4 +65,52 @@ button {
 
 button:hover {
   background-color: #908f71;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  form {
+    width: 50%; 
+  }
+
+  .contact-container {
+    padding-bottom: 100px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-bg {
+    height: auto; 
+  }
+
+  .contact-container {
+    height: auto; 
+    padding: 20px; 
+  }
+
+  form {
+    width: 75%; 
+  }
+
+  input, button, textarea {
+    font-size: 1rem; 
+  }
+
+  button {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding-bottom: 50px; 
+  }
+
+  form {
+    width: 90%;
+  }
+
+  input, button, textarea {
+    font-size: 0.9rem; 
+  }
 }
