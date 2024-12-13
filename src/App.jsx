@@ -16,12 +16,13 @@ import LogOut from './pages/LogOut/LogOut';
 import SignUp from './pages/signup/signup';
 
 import Navbar3 from './components/Navbar3/Navbar3';
-
+import './App.css'
 
 function App() {
   return (
     <div > 
       <Navbar2/> 
+      
       <Routes>
        <Route path="/home" element={<Home />} />
        <Route path="/about" element={<About />} />

@@ -1,13 +1,14 @@
 /* Background Style */
 .orders-bg {
   background: url('../../../public/assets/homebackground.jpg') no-repeat center center/cover;
+
 }
 
 /* Orders Container */
 .orders-container {
   padding: 60px;
   text-align: center;
-  min-height: 90vh; /* Ensures the container takes the full viewport height */
+  min-height: 90vh; 
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centers content vertically */
@@ -51,6 +52,10 @@ h1 {
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
 }
 
 .add-order button:hover {
@@ -59,6 +64,7 @@ h1 {
 
 /* Orders Table */
 .orders-table {
+  
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
@@ -92,6 +98,10 @@ h1 {
   margin-right: 10px;
   transition: background-color 0.3s ease;
   margin: 5px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
 }
 
 .orders-table td button:hover {
