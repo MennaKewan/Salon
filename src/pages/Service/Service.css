@@ -136,28 +136,16 @@ button:hover {
 .order-form button[type="button"]:hover {
   background-color: #999;
 }
-
-/* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
-  .order-form input,
-  .order-form select {
-    width: 90%; /* ضبط العرض على الشاشات الكبيرة */
-  }
-}
-
 @media (max-width: 768px) {
   .service-card {
     max-width: 100%;
-<<<<<<< HEAD
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-=======
   }
->>>>>>> cd68e1ad5f0704c0eae5e691551b9ac835d5ea49
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
   .order-form input,
   .order-form select {
@@ -172,21 +160,5 @@ body {
 
   .service-main {
     flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .order-form input,
-  .order-form select {
-    width: 100%; /* ضبط العرض على الشاشات الصغيرة */
-  }
-
-  .order-form {
-    width: 90%;
-    padding: 10px;
-  }
-
-  button {
-    width: 100%; /* ضبط عرض الزر ليغطي الحقل بالكامل */
   }
 }
