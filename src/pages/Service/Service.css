@@ -99,6 +99,7 @@ button:hover {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.884);
   z-index: 1000;
+<<<<<<< HEAD
   width: 70%;
   /* max-width: 40vw; */
   max-height: 90vh;
@@ -112,6 +113,13 @@ button:hover {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+=======
+  width: 90%;
+  max-width: 40vw;
+  max-height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+>>>>>>> 759c7dc99eed0cefc2b36ed93122ec56df9ba607
 }
 
 .order-form h2 {
@@ -135,21 +143,31 @@ button:hover {
   margin-top: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
+<<<<<<< HEAD
   width: 100% ;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+=======
+  width: 100%;
+>>>>>>> 759c7dc99eed0cefc2b36ed93122ec56df9ba607
 }
 
  .button-group {
   display: flex;
+<<<<<<< HEAD
   margin: auto;
   padding: 10px;
   justify-content: center;
   width: 40%;
   gap: 10px;
 
+=======
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+>>>>>>> 759c7dc99eed0cefc2b36ed93122ec56df9ba607
 }
 
 
@@ -170,6 +188,7 @@ button:hover {
 .order-form button[type="button"]:hover {
   background-color: #999;
 }
+<<<<<<< HEAD
 
 
 
@@ -178,12 +197,19 @@ button:hover {
 
 
 
+=======
+>>>>>>> 759c7dc99eed0cefc2b36ed93122ec56df9ba607
 @media (max-width: 768px) {
   .service-card {
     max-width: 100%;
   }
  
 
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
   
 
@@ -201,4 +227,8 @@ button:hover {
   .service-main {
     flex-direction: column;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 759c7dc99eed0cefc2b36ed93122ec56df9ba607

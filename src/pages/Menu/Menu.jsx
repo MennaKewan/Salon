@@ -3,7 +3,7 @@ import './Menu.css';
 
 const salons = [
   { name: 'صالون لمسات', image: '/assets/salon1.jpg' },
-  { name: 'صالون قصر الملكة', image: '/assets/salon4.jpg' },
+  { name: 'صالون قصر الملكة', image: '/assets/salon2.jpg' },
   { name: 'صالون آش', image: '/assets/salon3.jpg' },
   { name: 'صالون نجوتي', image: '/assets/salon4.jpg' },
   { name: 'صالون ميس الجمال', image: '/assets/salon5.jpg' },

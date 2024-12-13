@@ -43,7 +43,7 @@ const Navbar2 = () => {
             {/* استخدم NavLink بدلاً من Link هنا */}
             <li><NavLink to="home" activeClassName="active">الصفحة الرئيسية</NavLink></li>
             <li><NavLink to="menu" activeClassName="active">قائمة الصالونات</NavLink></li>
-            <li><NavLink to="service" activeClassName="active">عن الخدمة</NavLink></li>
+            <li><NavLink to="service" activeClassName="active"> خدمات صالوناتي </NavLink></li>
             <li><NavLink to="order" activeClassName="active">طلباتى</NavLink></li>
             <li><NavLink to="contact" activeClassName="active">تواصل معنا</NavLink></li>
             <li><NavLink to="LogOut" activeClassName="active">تسجيل الخروج</NavLink></li>
