@@ -6,7 +6,7 @@ const CustomerRatings = () => {
   const [ratings, setRatings] = useState([]);
   useEffect(() => {
     // Fetch data from the backend API
-    fetch(`${import.meta.env.REACT_APP_API_URL}/api/ratings`)
+    fetch(`https://the-real-project-backend-production-de46.up.railway.app/contacts/getContacts`)
       .then(response => response.json())
       .then(data => {
         setRatings(data);
@@ -16,16 +16,16 @@ const CustomerRatings = () => {
       });
   }, []);
   return (
-    <section className="mr-24 mt-24 ">
+    <section className=" bg-[url('D:\Work\Salon\public\assets\homebackground.jpg')] bg-cover bg-center bg-no-repeat h-screen">
 
-        <h2 >اراء العملاء</h2>
+        <h2 className='mr-24 text-[#333] pt-14'>اراء العملاء</h2>
         <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200">
+        <table className="min-w-full bg-[#333] text-white border border-gray-200 mt-2">
           <thead>
             <tr>
               <th className="py-2 px-4 border-b">اسم العميل</th>
               <th className="py-2 px-4 border-b">البريد الإلكتروني</th>
-              <th className="py-2 px-4 border-b">اسم الخدمة</th>
+              <th className="py-2 px-4 border-b">رقم الهاتف</th>
               <th className="py-2 px-4 border-b">التقييم</th>
               <th className="py-2 px-4 border-b">التعليق</th>
             </tr>
@@ -35,9 +35,9 @@ const CustomerRatings = () => {
               <tr key={index}>
                 <td className="py-2 px-4 border-b">{rating.fullName}</td>
                 <td className="py-2 px-4 border-b">{rating.email}</td>
-                <td className="py-2 px-4 border-b">{rating.serviceName}</td>
+                <td className="py-2 px-4 border-b">{rating.PhoneNumber}</td>
                 <td className="py-2 px-4 border-b">{rating.rating}</td>
-                <td className="py-2 px-4 border-b">{rating.comment}</td>
+                <td className="py-2 px-4 border-b">{rating.message}</td>
               </tr>
             ))}
           </tbody>

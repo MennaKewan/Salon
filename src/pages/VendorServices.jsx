@@ -8,32 +8,51 @@ const VendorServices = () => {
 
   useEffect(() => {
     // Fetch data from the backend API using fetch
-    fetch(`${import.meta.env.REACT_APP_API_URL}/api/services`)
+    fetch(`https://the-real-project-backend-production-de46.up.railway.app/service/getAllServices`)
       .then((response) => response.json())
       .then((data) => setServices(data))
       .catch(error => console.error('Error fetching services:', error));
   }, []); // Empty array to run only once when component mounts
 
-  const handleEdit = (id) => {
-    const serviceToEdit = services.find((service) => service.id === id);
-    setCurrentService(serviceToEdit);
-    setModalOpen(true); // Open modal for editing
-  };
+  // const handleEdit = (id) => {
+  //   const serviceToEdit = services.find((service) => service.id === id);
+  //   setCurrentService(serviceToEdit);
+  //   setModalOpen(true); // Open modal for editing
+  // };
 
-  const handleDelete = (id) => {
-    fetch(`${import.meta.env.REACT_APP_API_URL}/api/services/${id}`, {
+  // const handleDelete = (id) => {
+  //   fetch(`https://the-real-project-backend-production-de46.up.railway.app/service/deleteService/${id}`, {
+  //     method: 'DELETE',
+  //   })
+  //     .then(() => {
+  //       setServices(services.filter((service) => service.id !== id));
+  //     })
+  //     .catch(error => {
+  //       console.error('Error deleting service:', error);
+  //     });
+  // };
+  const handleDelete = (_id) => {
+    fetch(`https://the-real-project-backend-production-de46.up.railway.app/service/deleteService/${_id}`, {
       method: 'DELETE',
     })
-      .then(() => {
-        setServices(services.filter((service) => service.id !== id));
+      .then((response) => {
+        if (response.ok) {
+          setServices(services.filter((service) => service._id !== _id)); // Update the UI by filtering out the deleted service
+        } else {
+          return response.json().then((errorData) => {
+            console.error('Failed to delete service:', errorData.message);
+            alert('Failed to delete the service');
+          });
+        }
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error deleting service:', error);
+        alert('An error occurred while deleting the service');
       });
   };
 
   const handleUpdateService = (updatedService) => {
-    fetch(`${import.meta.env.REACT_APP_API_URL}/api/services/${updatedService.id}`, {
+    fetch(`https://the-real-project-backend-production-de46.up.railway.app/service/addService`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -51,22 +70,22 @@ const VendorServices = () => {
       });
   };
 
-  const ServiceCard = ({ service, onEdit, onDelete }) => {
+  const ServiceCard = ({ service,  onDelete }) => {
     return (
-      <div className="bg-white rounded-lg p-6 shadow-md">
+      <div className="bg-white rounded-lg p-6 shadow-md mt-5">
         <h2 className="text-2xl font-semibold mb-2">{service.serviceName}</h2>
         <p className="text-gray-700 mb-4">{service.serviceDescription}</p>
         <p className="text-gray-800 font-bold">السعر: {service.servicePrice} ريال</p>
         <div className="flex justify-between mt-4">
-          <button
+          {/* <button
             className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
             onClick={() => onEdit(service.id)}
           >
             تعديل
-          </button>
+          </button> */}
           <button
             className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-700"
-            onClick={() => onDelete(service.id)}
+            onClick={() => onDelete(service._id)}
           >
             حذف
           </button>
@@ -80,7 +99,7 @@ const VendorServices = () => {
       serviceName: PropTypes.string.isRequired,
       serviceDescription: PropTypes.string.isRequired,
       servicePrice: PropTypes.number.isRequired,
-      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      _id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     }).isRequired,
     onEdit: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
@@ -92,7 +111,7 @@ const VendorServices = () => {
   };
 
   return (
-    <>
+    <section className=" bg-[url('D:\Work\Salon\public\assets\homebackground.jpg')] bg-cover bg-center bg-no-repeat h-screen">
       <h1>خدماتي</h1>
       <div className="flex flex-col items-center justify-center mt-20">
         <button
@@ -107,7 +126,6 @@ const VendorServices = () => {
               <ServiceCard
                 key={service.id}
                 service={service}
-                onEdit={handleEdit}
                 onDelete={handleDelete}
               />
             ))}
@@ -121,7 +139,7 @@ const VendorServices = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
@@ -157,7 +175,7 @@ const Modal = ({ toggleModal, service, onSave }) => {
     } else {
       try {
         const response = await fetch(
-          `${import.meta.env.REACT_APP_API_URL}/api/services`,
+          `https://the-real-project-backend-production-de46.up.railway.app/service/addService`,
           {
             method: 'POST',
             headers: {
@@ -189,12 +207,12 @@ const Modal = ({ toggleModal, service, onSave }) => {
         className="bg-white p-8 rounded shadow-lg max-w-xl w-full"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
+        {/* <button
           className="absolute top-0 right-0 mt-2 mr-2 text-gray-700"
           onClick={toggleModal}
         >
           &times;
-        </button>
+        </button> */}
         <h2 className="text-2xl mb-4">{service ? 'تعديل الخدمة' : 'اضف خدمة جديدة'}</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">

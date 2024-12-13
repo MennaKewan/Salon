@@ -34,3 +34,10 @@
     border: none;
   }
 
+.background{
+  background-image: url('/Salon/public/assets/homebackground.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

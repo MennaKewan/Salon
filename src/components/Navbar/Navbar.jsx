@@ -166,7 +166,7 @@ const Navbar = ({ isLoggedIn , role }) => {
             {isLoggedIn ? (
               role === 'vendor' ? (
                 <>
-                  <li><Link to="/">الصفحة الرئيسية</Link></li>
+                  <li><Link to="/vendorhome">الصفحة الرئيسية</Link></li>
                   <li><Link to="/vendorservices">خدماتي</Link></li>
                   <li><Link to="/customerratings">اراء العملاء</Link></li>
                   <li><Link to="/orders">الطلبات</Link></li>

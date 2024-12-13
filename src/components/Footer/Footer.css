@@ -1,10 +1,10 @@
 /* تنسيق الفوتر */
 .footer {
     padding: 10px;
-    background-color: #F3C04F; /* اللون الأساسي */
+    background-color: #333; /* اللون الأساسي */
     text-align: center;
     font-size: 16px;
-    color: #333; /* لون النص */
+    color: #F3C04F; /* لون النص */
     position: fixed;
     bottom: 0;
     width: 100%;

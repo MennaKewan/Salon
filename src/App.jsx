@@ -1,4 +1,4 @@
-import {  Route, Routes, Navigate } from 'react-router-dom';
+import {  Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -16,6 +16,8 @@ import Orders from './pages/Orders';
 import Logout from './pages/LogOut/LogOut';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './components/PrivateRouter';
+import NotFound from './pages/NotFound';
+import VendorHome from './pages/vendorhome/vendorhome';
 
 function App() {
   const [auth, setAuth] = useState({ token: '', role: '' });
@@ -45,6 +47,7 @@ function App() {
         <Navbar isLoggedIn={!!auth.token} role={auth.role} />
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/vendorhome" element={<VendorHome />} />
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/gallery" element={<Gallery />} />
@@ -56,7 +59,7 @@ function App() {
           <Route path="/customerratings" element={<PrivateRoute element={<CustomerRatings />} role="vendor" />} />
           <Route path="/orders" element={<PrivateRoute element={<Orders />} role="vendor" />} />
           <Route path="/logout" element={<Logout onLogout={handleLogout} />} />
-          <Route path="*" element={<Navigate to="/login" />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
     </AuthProvider>
