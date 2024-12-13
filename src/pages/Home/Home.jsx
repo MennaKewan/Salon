@@ -1,18 +1,21 @@
-import React from 'react';
-import './Home.css'; 
+import { Link } from 'react-router-dom';
+import './Home.css';
 
 const Home = () => {
   return (
-    
     <div className="home">
       <div className='content'>
-      <h1>Welcome to Miroire</h1>
-      <p>"Find, Book, Beautify - Salon Choices, All in One Place"</p>
-      <div className='home-btn'>
-      <button>OUR SERVICES</button>
-      <button>BOOK AN APPOINTMENT</button>
+        <h1 className='white1'>مرحباً بك في Miroire</h1>
+        <p>"ابحث، احجز، تزيّن - كل اختيارات الصالونات في مكان واحد"</p>
+        <div className='home-btn'>
+          <Link to="/service">
+            <button>خدماتنا</button>
+          </Link>
+          <Link to="/contact">
+            <button>تواصل معنا</button>
+          </Link>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

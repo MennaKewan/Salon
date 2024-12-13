@@ -1,6 +1,8 @@
 
 .btn5{
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 65px;
   margin: 0  auto 130px;
   

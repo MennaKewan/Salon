@@ -9,7 +9,6 @@ import Gallery from './pages/Gallery/Gallery';
 import Contact from './pages/Contact/Contact';
 import SignUp from './pages/1-Login/SignUp';
 import Login from './pages/Login/Login';
-import UserPage from './pages/User/UserPage';
 import VendorServices from './pages/VendorServices';
 import CustomerRatings from './pages/CustomerRatings';
 import Orders from './pages/Orders';
@@ -18,6 +17,8 @@ import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './components/PrivateRouter';
 import NotFound from './pages/NotFound';
 import VendorHome from './pages/vendorhome/vendorhome';
+import Order from './pages/Order/Order';
+import Service from './pages/Service/Service';
 
 function App() {
   const [auth, setAuth] = useState({ token: '', role: '' });
@@ -46,15 +47,16 @@ function App() {
     <AuthProvider>
         <Navbar isLoggedIn={!!auth.token} role={auth.role} />
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/vendorhome" element={<VendorHome />} />
           <Route path="/about" element={<About />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/home" element={<PrivateRoute element={<Home/>} role="user" />} />
+          <Route path="/menu" element={<PrivateRoute element={<Menu/>} role="user" />} />
+          <Route path="/contact" element={<PrivateRoute element={<Contact/>} role="user" />} />
+          <Route path="/order" element={<PrivateRoute element={<Order />} role="user" />} />
+          <Route path="/service" element={<PrivateRoute element={<Service />} role="user" />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          <Route path="/user" element={<PrivateRoute element={<UserPage />} role="user" />} />
+          <Route path="/vendorhome" element={<PrivateRoute element={<VendorHome/>} role="vendor" />} />
           <Route path="/vendorservices" element={<PrivateRoute element={<VendorServices />} role="vendor" />} />
           <Route path="/customerratings" element={<PrivateRoute element={<CustomerRatings />} role="vendor" />} />
           <Route path="/orders" element={<PrivateRoute element={<Orders />} role="vendor" />} />
